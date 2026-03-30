@@ -1,0 +1,70 @@
+#certificates{
+  background: var(--bg);
+}
+
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,240px));
+  gap:16px;
+  justify-content:center;
+}
+
+.cert-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  text-decoration:none;
+  transition:transform .2s, border-color .2s;
+  max-width:240px;
+}
+
+.cert-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(0,212,200,.3);
+  max-width: 280px;      /* card melebar */
+  padding-bottom: 18px;  /* beri ruang bawah */
+}
+
+.cert-card img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: max-height 0.3s ease, transform 0.3s ease;
+}
+
+.cert-card:hover img {
+  max-height: 220px;
+  transform: scale(1.03);
+}
+
+.cert-name{
+  font-size:13px;
+  font-weight:500;
+  color:var(--text);
+  line-height:1.4;
+}
+
+.cert-image-wrapper{
+  position:relative;
+}
+
+.expired-badge{
+  position:absolute;
+  top:6px;
+  left:6px;
+  background:#ff4d4f;
+  color:white;
+  font-size:11px;
+  padding:3px 6px;
+  border-radius:6px;
+  font-weight:600;
+}
+
+.cert-date{
+  font-size:11px;
+  color:#888;
+  margin-top:4px;
+}

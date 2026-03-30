@@ -1,0 +1,77 @@
+#experience {
+  background: var(--bg2);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--cyan), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  transition: border-color 0.2s;
+}
+
+.timeline-item:hover {
+  border-color: rgba(0,212,200,0.3);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--cyan);
+  border: 3px solid var(--bg2);
+  box-shadow: 0 0 12px rgba(0,212,200,0.5);
+}
+
+.exp-role {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.exp-company {
+  font-size: 14px;
+  color: var(--cyan);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.exp-year {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.05);
+  padding: 3px 12px;
+  border-radius: 50px;
+  margin-top: 8px;
+}
+
+.exp-duration{
+  font-size:12px;
+  color:var(--cyan);
+  margin-top:6px;
+  font-weight:500;
+}
