@@ -1,159 +1,155 @@
 /* =========================
-   LIGHT MODE
+   LIGHT MODE (CLEAN SYSTEM)
 ========================= */
 
 .light-mode{
 
-  --bg:#f7f8fa;
-  --bg2:#ffffff;
-  --card:#ffffff;
+  /* COLORS */
+  --bg: #f8fafc;
+  --bg2: #ffffff;
+  --card: #ffffff;
 
-  --bg:#f4f6f9;      /* background utama */
-  --bg2:#ffffff;     /* section highlight */
-  --card:#ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
 
-  --text:#0f172a;
-  --text2:#475569;
+  --border: #e5e7eb;
 
-  --border:#e5e7eb;
+  --cyan: #0ea5e9;
+  --cyan2: #0284c7;
 
-  --cyan:#0ea5e9;
-
-  background:#f7f8fa;
-  color:#111;
-
+  background: var(--bg);
+  color: var(--text);
 }
+
+/* =========================
+   BASE
+========================= */
 
 .light-mode body{
-  background:#f6f8fb;
-  color:#111;
+  background: var(--bg);
+  color: var(--text);
 }
 
+/* ❗ DEFAULT SECTION */
 .light-mode section{
-  background:#f6f8fb;
-  border-bottom:1px solid #e5e7eb;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
+
+.light-mode .logo{
+  color: #1e40af; 
+}
+
+.light-mode .logo span{
+  color: var(--cyan);
+}
+
+.light-mode .hero-text h1{
+  color: #1e40af;
+}
+
+/* =========================
+   ALTERNATING SECTIONS (FIX)
+========================= */
+
+.light-mode #about,
+.light-mode #experience,
+.light-mode #projects{
+  background: var(--bg2);
+}
+
+/* contact sengaja beda */
+.light-mode #contact{
+  background: var(--bg);
+}
+
+/* =========================
+   TEXT
+========================= */
 
 .light-mode h1,
 .light-mode h2,
 .light-mode h3,
 .light-mode h4{
-  color:#111;
+  color: var(--text);
 }
 
 .light-mode .section-title{
-  color:#111;
+  color: #1e40af;
 }
 
 .light-mode p,
 .light-mode .subtitle{
-  color:#555;
-}
-
-.light-mode #about{
-  background:#ffffff;
-}
-
-.light-mode .tech-card,
-.light-mode .project-card,
-.light-mode .cert-card,
-.light-mode .stat-box{
-  background:#ffffff;
-  border:1px solid #e6e6e6;
-  box-shadow:0 4px 14px rgba(0,0,0,0.06);
-}
-
-.light-mode .timeline-item{
-  background:#ffffff;
-  border:1px solid #e8e8e8;
-}
-
-.light-mode #contact{
-  background:#ffffff;
-}
-
-.light-mode .contact-link{
-  background:#ffffff;
-  border:1px solid #e6e6e6;
-}
-
-.light-mode nav{
-  background:#ffffff;
-  box-shadow:0 2px 10px rgba(0,0,0,0.06);
-}
-
-.light-mode .nav-links a{
-  color:#333;
-}
-
-.light-mode .nav-links a.active{
-  color:#0ea5e9;
-}
-
-.light-mode .settings-dropdown{
-  background:#ffffff;
-  color:#111;
-  border:1px solid #e6e6e6;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
-}
-
-.light-mode .hero-text h1{
-  color:#111;
-}
-
-.light-mode .subtitle{
-  color:#444;
+  color: var(--muted);
 }
 
 .light-mode .greeting{
-  color:#0ea5e9;
+  color: var(--cyan);
 }
 
-.light-mode .project-card,
+/* =========================
+   CARD COMPONENTS
+========================= */
+
 .light-mode .tech-card,
+.light-mode .project-card,
 .light-mode .cert-card,
-.light-mode .stat-box{
-  background:#ffffff;
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+.light-mode .stat-box,
+.light-mode .timeline-item,
+.light-mode .contact-link{
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.light-mode nav{
+  background: var(--bg2);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.light-mode .nav-links a{
+  color: var(--muted);
+}
+
+.light-mode .nav-links a.active{
+  color: var(--cyan);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.light-mode .btn-primary{
+  background: var(--cyan);
+  color: #fff;
 }
 
 .light-mode .btn-secondary{
-  border:1px solid #ddd;
-  color:#111;
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
-.light-mode .btn-primary{
-  background:#0ea5e9;
-}
+/* =========================
+   OTHER ELEMENTS
+========================= */
 
-.light-mode .exp-role{
-  color:#111;
-}
-
-.light-mode .project-title{
-  color:#111;
-}
-
-.light-mode .exp-year{
-  background:#f0f2f5;
+.light-mode .exp-role,
+.light-mode .project-title,
+.light-mode .contact-val{
+  color: var(--text);
 }
 
 .light-mode .project-desc{
-  color:#555;
+  color: var(--muted);
 }
 
-.light-mode .contact-val{
-  color:#111;
+.light-mode .exp-year{
+  background: var(--bg);
 }
-
-.light-mode section:nth-child(even){
-  background:#ffffff;
-}
-
-.light-mode section:nth-child(odd){
-  background:#f8fafc;
-}
-
 
 /* =========================
    SETTINGS MENU
@@ -176,6 +172,12 @@
 
 .light-mode .settings-btn{
   color:#111;
+}
+
+.light-mode .settings-dropdown{
+  background: #eef6ff; /* putih kebiruan */
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .settings-dropdown{

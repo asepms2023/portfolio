@@ -51,6 +51,7 @@ body {
 
 section {
   padding: 90px 8%;
+  background: var(--bg);
 }
 
 
