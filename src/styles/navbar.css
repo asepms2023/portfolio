@@ -1,0 +1,138 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 8%;
+  backdrop-filter: blur(12px);
+  background: rgba(13,13,18,0.85);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: var(--cyan);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+.settings-icon{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+
+  background: rgba(0,212,200,0.1);
+  border:1px solid var(--border);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition: all 0.25s ease;
+}
+
+.settings-icon img{
+  width:18px;
+  height:18px;
+  object-fit:contain;
+}
+
+.settings-icon:hover{
+  background: rgba(0,212,200,0.18);
+  border-color: rgba(0,212,200,0.4);
+  transform: scale(1.05);
+}
+
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 101;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger animation */
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-settings{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.settings-btn{
+  background:none;
+  border:none;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+
+.settings-dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: #16161f;
+  padding: 15px;
+  border-radius: 8px;
+  width: 140px;
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+}

@@ -1,0 +1,19 @@
+/* src/styles/index.css */
+
+/* 1. Base & Configuration */
+@import "./theme.css";
+@import "./global.css";
+
+/* 2. Components / Sections */
+@import "./navbar.css";
+@import "./hero.css";
+@import "./about.css";
+@import "./techstack.css";
+@import "./certificates.css";
+@import "./experience.css";
+@import "./projects.css";
+@import "./contact.css";
+@import "./footer.css";
+
+/* 3. Utilities & Responsive (Paling bawah) */
+@import "./responsive.css";

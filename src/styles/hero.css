@@ -1,0 +1,258 @@
+/* HERO SECTION */
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 8% 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,212,200,0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-glow2 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0,170,255,0.08) 0%, transparent 70%);
+  top: 20%;
+  right: 10%;
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.greeting {
+  font-size: 16px;
+  color: var(--cyan);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero-text h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.hero-text .subtitle{
+  text-align:justify;
+}
+
+.name-highlight {
+  background: linear-gradient(90deg, var(--cyan), var(--cyan2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  max-width: 420px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: #000;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+/* PHOTO */
+
+.hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.photo-wrapper {
+  width: 320px;
+  height: 380px;
+  position: relative;
+}
+
+.photo-bg-shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,212,200,0.15), rgba(0,170,255,0.1));
+  border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  border: 1.5px solid rgba(0,212,200,0.2);
+  animation: morphBlob 8s ease-in-out infinite;
+}
+
+@keyframes morphBlob {
+  0%,100% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  }
+  50% {
+    border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+  }
+}
+
+.photo-placeholder {
+  position: absolute;
+  inset: 20px;
+  background: linear-gradient(160deg, #1e2035, #151520);
+  border-radius: 30% 50% 50% 30% / 30% 30% 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30% 50% 50% 30% / 30% 30% 50% 50%;
+}
+
+/* PROFILE HOVER */
+
+.profile-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity .4s ease;
+}
+
+.profile-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.photo-placeholder:hover .profile-main {
+  opacity: 0;
+}
+
+.photo-placeholder:hover .profile-hover {
+  opacity: 1;
+}
+
+/* BADGE */
+
+.badge-floating {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-floating .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.badge2 {
+  bottom: 20px;
+  right: -30px;
+}
+
+.badge-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cyan);
+}

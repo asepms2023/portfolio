@@ -1,0 +1,93 @@
+/* =========================
+   RESET
+========================= */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+  --bg: #0d0d12;
+  --bg2: #13131c;
+  --card: #16161f;
+
+  --cyan: #00d4c8;
+  --cyan2: #00aaff;
+
+  --text: #f0f0f0;
+  --muted: #888;
+
+  --border: rgba(255,255,255,0.08);
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+section {
+  padding: 90px 8%;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.divider-line {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--cyan2));
+  border-radius: 2px;
+  margin-bottom: 50px;
+}
+
+.lang-fade {
+  animation: fadeSwitch 0.35s ease;
+}
+
+@keyframes fadeSwitch {
+  0%   { opacity: 0.3; }
+  100% { opacity: 1; }
+}
