@@ -44,7 +44,7 @@ function Experience({ language }) {
 
           const end = job.end_date
             ? formatDate(job.end_date, language)
-            : (language === "IND" ? "Saat ini" : "Present");
+            : (language === "IND" ? "Sekarang" : "Present");
 
           const duration = calculateJobDuration(job, language);
 
