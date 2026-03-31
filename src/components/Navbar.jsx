@@ -92,14 +92,12 @@ function Navbar({ language, setLanguage, theme, setTheme }) {
           </a>
         </li>
 
-        {/* 🔥 EXPERIENCE DULU */}
         <li>
           <a href="#experience" className={activeSection === "experience" ? "active" : ""}>
             {language === "IND" ? navbar.menu.experience.id : navbar.menu.experience.en}
           </a>
         </li>
 
-        {/* 🔥 CERTIFICATE SETELAH EXPERIENCE */}
         <li>
           <a href="#certificates" className={activeSection === "certificates" ? "active" : ""}>
             {language === "IND" ? navbar.menu.certificates.id : navbar.menu.certificates.en}

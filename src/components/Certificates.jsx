@@ -24,13 +24,13 @@ function Certificates({ language }) {
     return now > end;
   };
 
-  // 🔥 PREPROCESS DATA
+  // PREPROCESS DATA
   const processedList = data.list.map(cert => ({
     ...cert,
     expired: isExpired(cert.end_date),
   }));
 
-  // 🔥 SORT
+  // SORT
   const sortedList = processedList.sort((a, b) => {
 
     if (a.expired && !b.expired) return 1;

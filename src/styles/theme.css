@@ -30,7 +30,7 @@
   color: var(--text);
 }
 
-/* ❗ DEFAULT SECTION */
+/* DEFAULT SECTION */
 .light-mode section{
   background: var(--bg);
   border-bottom: 1px solid var(--border);
