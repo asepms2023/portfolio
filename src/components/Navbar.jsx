@@ -9,6 +9,11 @@ function Navbar({ language, setLanguage, theme, setTheme }) {
 
   const navbar = navbarData;
 
+  // 🔥 HANDLE AUTO CLOSE MENU
+  const handleNavClick = () => {
+    setIsOpen(false);
+  };
+
   // =========================
   // SCROLL ACTIVE SECTION
   // =========================
@@ -75,43 +80,71 @@ function Navbar({ language, setLanguage, theme, setTheme }) {
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
 
         <li>
-          <a href="#home" className={activeSection === "home" ? "active" : ""}>
+          <a 
+            href="#home" 
+            className={activeSection === "home" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.home.id : navbar.menu.home.en}
           </a>
         </li>
 
         <li>
-          <a href="#about" className={activeSection === "about" ? "active" : ""}>
+          <a 
+            href="#about" 
+            className={activeSection === "about" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.about.id : navbar.menu.about.en}
           </a>
         </li>
 
         <li>
-          <a href="#techstack" className={activeSection === "techstack" ? "active" : ""}>
+          <a 
+            href="#techstack" 
+            className={activeSection === "techstack" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.skills.id : navbar.menu.skills.en}
           </a>
         </li>
 
         <li>
-          <a href="#experience" className={activeSection === "experience" ? "active" : ""}>
+          <a 
+            href="#experience" 
+            className={activeSection === "experience" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.experience.id : navbar.menu.experience.en}
           </a>
         </li>
 
         <li>
-          <a href="#certificates" className={activeSection === "certificates" ? "active" : ""}>
+          <a 
+            href="#certificates" 
+            className={activeSection === "certificates" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.certificates.id : navbar.menu.certificates.en}
           </a>
         </li>
 
         <li>
-          <a href="#projects" className={activeSection === "projects" ? "active" : ""}>
+          <a 
+            href="#projects" 
+            className={activeSection === "projects" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.projects.id : navbar.menu.projects.en}
           </a>
         </li>
 
         <li>
-          <a href="#contact" className={activeSection === "contact" ? "active" : ""}>
+          <a 
+            href="#contact" 
+            className={activeSection === "contact" ? "active" : ""}
+            onClick={handleNavClick}
+          >
             {language === "IND" ? navbar.menu.contact.id : navbar.menu.contact.en}
           </a>
         </li>
