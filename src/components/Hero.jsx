@@ -44,7 +44,7 @@ function Hero({ language }) {
               {language === "IND" ? hero.button.contact.id : hero.button.contact.en}
             </a>
 
-            <a
+            {/* <a
               href={language === "IND" ? hero.cv.id : hero.cv.en}
               className="btn-secondary"
               target="_blank"
@@ -52,7 +52,7 @@ function Hero({ language }) {
             >
               <FiDownload style={{ marginRight: "6px" }} />
               {language === "IND" ? hero.button.cv.id : hero.button.cv.en}
-            </a>
+            </a> */}
 
           </div>
 
