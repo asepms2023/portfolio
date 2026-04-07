@@ -40,8 +40,8 @@ export const aboutData = {
       id: "Proyek Enterprise"
     },
     tools: {
-      en: "Tools & Technologies",
-      id: "Tools & Teknologi"
+      en: "Technical Skills",
+      id: "Keahlian Teknis"
     }
   }
 };
