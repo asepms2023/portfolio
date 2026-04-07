@@ -4,15 +4,18 @@ function TechStack({ language }) {
 
   const data = techstackData;
 
+  // helper biar clean
+  const t = (text) => language === "IND" ? text.id : text.en;
+
   return (
     <section id="techstack">
 
       <div className="section-label">
-        {language === "IND" ? data.label.id : data.label.en}
+        {t(data.label)}
       </div>
 
       <div className="section-title">
-        {language === "IND" ? data.title.id : data.title.en}
+        {t(data.title)}
       </div>
 
       <div className="divider-line"></div>
@@ -21,9 +24,7 @@ function TechStack({ language }) {
 
         <div className="tech-category" key={index}>
 
-          <h3>
-            {language === "IND" ? category.title.id : category.title.en}
-          </h3>
+          <h3>{t(category.title)}</h3>
 
           <div className="tech-grid">
 
@@ -31,9 +32,12 @@ function TechStack({ language }) {
 
               <div className="tech-card" key={i}>
 
-                <img src={item.img} alt={item.name} />
+                <img 
+                  src={item.img} 
+                  alt={t(item.name)} 
+                />
 
-                <span>{item.name}</span>
+                <span>{t(item.name)}</span>
 
               </div>
 
