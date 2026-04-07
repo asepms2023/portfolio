@@ -56,7 +56,8 @@ export const techstackData = {
         id: "Tools & Kolaborasi"
       },
       items: [
-        { name: "GitHub", img: "/assets/img/skills-tools/github.png" },
+        // { name: "GitHub", img: "/assets/img/skills-tools/github.png" },
+        { name: "Git", img: "/assets/img/skills-tools/git.png" },
         { name: "Figma", img: "/assets/img/skills-tools/figma.png" },
         { name: "Draw.io", img: "/assets/img/skills-tools/drawio.png" },
         { name: "Microsoft", img: "/assets/img/skills-tools/microsoft.png" }
