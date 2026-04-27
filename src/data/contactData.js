@@ -25,16 +25,16 @@ export const contactData = {
       link: "mailto:asepms2023@gmail.com",
       img: "/assets/img/contact/email.png"
     },
-    {
-      type: "call",
-      label: {
-        en: "WhatsApp",
-        id: "WhatsApp"
-      },
-      value: "0852-8004-8627",
-      link: "https://wa.me/6285280048627",
-      img: "/assets/img/contact/call.png"
-    },
+    // {
+    //   type: "call",
+    //   label: {
+    //     en: "WhatsApp",
+    //     id: "WhatsApp"
+    //   },
+    //   value: "0852-8004-8627",
+    //   link: "https://wa.me/6285280048627",
+    //   img: "/assets/img/contact/call.png"
+    // },
     {
       type: "linkedin",
       label: {

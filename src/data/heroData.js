@@ -43,11 +43,11 @@ export const heroData = {
       link: "mailto:asepms2023@gmail.com",
       img: "/assets/img/hero/email.png"
     },
-    {
-      type: "call",
-      link: "https://wa.me/6285280048627",
-      img: "/assets/img/hero/call.png"
-    },
+    // {
+    //   type: "call",
+    //   link: "https://wa.me/6285280048627",
+    //   img: "/assets/img/hero/call.png"
+    // },
     {
       type: "linkedin",
       link: "https://www.linkedin.com/in/m-asep-shayfullah-0423171b9",
