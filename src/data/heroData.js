@@ -49,6 +49,11 @@ export const heroData = {
     //   img: "/assets/img/hero/call.png"
     // },
     {
+      type: "github",
+      link: "https://github.com/asepms2023",
+      img: "/assets/img/hero/github.png"
+    },
+    {
       type: "linkedin",
       link: "https://www.linkedin.com/in/m-asep-shayfullah-0423171b9",
       img: "/assets/img/hero/linkedin.png"
